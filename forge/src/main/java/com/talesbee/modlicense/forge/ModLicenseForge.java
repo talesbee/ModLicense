@@ -1,6 +1,6 @@
-package com.example.modlicense.forge;
+package com.talesbee.modlicense.forge;
 
-import com.example.modlicense.common.ProtocolVersion;
+import com.talesbee.modlicense.common.ProtocolVersion;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;

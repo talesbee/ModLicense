@@ -1,6 +1,6 @@
-package com.example.modlicense.neoforge;
+package com.talesbee.modlicense.neoforge;
 
-import com.example.modlicense.common.ProtocolVersion;
+import com.talesbee.modlicense.common.ProtocolVersion;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
