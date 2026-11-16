@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'net.minecraftforge.gradle'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+minecraft {
+    mappings channel: 'official', version: minecraft_version
+
+    runs {
+        configureEach {
+            workingDir = layout.projectDirectory.dir('run')
+        }
+
+        register('client')
+
+        register('server') {
+            args '--nogui'
+        }
+    }
+}
+
+repositories {
+    minecraft.mavenizer(it)
+    maven fg.forgeMaven
+    maven fg.minecraftLibsMaven
+    mavenCentral()
+    // maven.minecraftforge.net returns 404 for the mcp_config zip; this mirror serves a copy with the same sha1.
+    maven { url = 'https://maven.neoforged.net/releases' }
+}
+
+dependencies {
+    implementation project(':common')
+    implementation minecraft.dependency("net.minecraftforge:forge:${forge_version}")
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

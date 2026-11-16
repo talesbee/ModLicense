@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[0,)"
+license="MIT"
+
+[[mods]]
+modId="modlicense"
+version="0.1.0"
+displayName="ModLicense"
+authors="Tales Iago Batista"
+description='''Phase 0 technical spike. Not for release.'''
+
+[[dependencies.modlicense]]
+    modId="forge"
+    mandatory=true
+    versionRange="[52,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.modlicense]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.21.1,1.22)"
+    ordering="NONE"
+    side="BOTH"
